@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.0.16",
     "appwrite": "^10.2.0",
+    "pinia": "^2.0.33",
     "uuid": "^9.0.0",
     "vue": "^3.2.47",
     "vue-router": "^4.0.13"

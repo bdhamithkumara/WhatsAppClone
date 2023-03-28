@@ -5,5 +5,4 @@ const client = new Client()
     .setProject('642091761dda6ab17e42');   // Your project ID
 
 const account = new Account(client);
-
 export {client , account};
