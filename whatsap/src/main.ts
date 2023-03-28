@@ -1,11 +1,12 @@
-import { createApp } from 'vue'
-import './style.css'
+import { createApp } from 'vue';
+import './style.css';
 import App from './App.vue';
 import { createRouter ,  createWebHistory ,RouteRecordRaw } from 'vue-router';
 import Login from "./pages/Login.vue";
 import Registration from './pages/Registration.vue';
 import Application from './pages/Application.vue';
 import { account } from './api';
+import { createPinia } from 'pinia'
 // const routes:RouteRecordRaw[] = [
 //     ,
 // ];
@@ -38,4 +39,6 @@ router.beforeEach(async (to,from,next) => {
     next();
 })
 
-createApp(App).use(router).mount('#app')
+const pinia = createPinia(); 
+
+createApp(App).use(router).use(pinia).mount('#app');
