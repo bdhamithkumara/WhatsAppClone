@@ -1,4 +1,7 @@
 <template>
-    <h1>application</h1>
+    <main class="w-full h-full flex">
+        <!-- sidebar -->
+        <!-- main content -->
+    </main>
 </template>
 
