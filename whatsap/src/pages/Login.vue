@@ -19,14 +19,14 @@ import { RouterLink } from 'vue-router';
         label="Email"
         placeholder="someone@somewhere.com"
         class="w-full mt-10"
-        ref="email"
+        v-model="email"
       />
       <Input
         type="password"
         label="Password"
         placeholder="Password..."
         class="w-full mt-5"
-        ref="password"
+        v-model="password"
       />
   
         <Button text="Login" class="mt-10 w-full" @click="login"></Button>
@@ -34,16 +34,22 @@ import { RouterLink } from 'vue-router';
     </section>
   </template>
 
-<script setup lang="ts">
+<script type="module" setup lang="ts">
  import { ref } from 'vue';
  import Input from "../components/Input.vue";
 import Button from "../components/Button.vue";
+import { account } from '../api';
+import { useRouter } from 'vue-router';
 
  const email = ref();
  const password = ref();
  
- function login(){
+ const router = useRouter()
+
+async function login(){
+    await account.createEmailSession(email.value,password.value)
     console.log("loggin in...");
+    router.push({ name: "application" });
  }
 
 </script>
