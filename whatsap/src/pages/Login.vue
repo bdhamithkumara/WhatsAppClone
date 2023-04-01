@@ -1,6 +1,3 @@
-
-import { RouterLink } from 'vue-router';
-
 <template>
     <section class="w-full h-full flex flex-col items-center justify-center">
       <div class="w-80 flex flex-col items-center">
@@ -36,6 +33,7 @@ import { RouterLink } from 'vue-router';
 
 <script type="module" setup lang="ts">
  import { ref } from 'vue';
+ import { RouterLink } from 'vue-router';
  import Input from "../components/Input.vue";
 import Button from "../components/Button.vue";
 import { account } from '../api';

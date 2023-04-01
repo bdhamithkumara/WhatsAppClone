@@ -40,5 +40,4 @@ router.beforeEach(async (to,from,next) => {
 })
 
 const pinia = createPinia(); 
-
 createApp(App).use(router).use(pinia).mount('#app');
